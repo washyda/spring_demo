@@ -1,0 +1,2 @@
+spring.application.name=springTest
+logging.level.com.hbsc.iotmiddleplatform.mapper = debug

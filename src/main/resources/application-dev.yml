@@ -1,0 +1,42 @@
+server:
+  port: 8498
+spring:
+  application:
+    name: springTest
+  security:
+    user:
+      name: washy
+      password: 159357
+  main:
+    allow-circular-references: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-test-query: SELECT 1
+      max-lifetime: 30000
+      maximum-pool-size: 10
+      minimum-idle: 3
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/spring01?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&autoReconnect=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: '159357'
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: -1
+      max-request-size: -1
+mybatis-plus:
+  configuration:
+    # 在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射 ！！！
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#
+#logging:
+#  level:
+#    com:
+#      xt:
+#        zeus: debug
+
